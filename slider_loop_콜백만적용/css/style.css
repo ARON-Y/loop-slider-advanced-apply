@@ -1,0 +1,70 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+#slider {
+  width: 400px;
+  height: 250px;
+  position: relative;
+  margin: 100px auto;
+  overflow: hidden;
+}
+#slider ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 0;
+  width: 300%;
+  height: 100%;
+}
+#slider ul li {
+  width: 33.3333333333%;
+  height: 100%;
+  font-size: 40px;
+  color: #000;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*
+     nth-of-type은 li의 순서에 따라서 속성을 적용하는 것이기 때문에 loop slider의 경우처럼 li의 순서가 바뀌는 경우 적용하는것은 부적절하다
+     따라서 li에 data속성으로 부여하여 백그라운드를 적용시킴
+     */
+}
+#slider ul li[data-index="1"] {
+  background: aqua;
+}
+#slider ul li[data-index="2"] {
+  background: hotpink;
+}
+#slider ul li[data-index="3"] {
+  background: orange;
+}
+
+.prev {
+  position: absolute;
+  top: 50%;
+  left: 50px;
+  margin-top: -50px;
+}
+
+.next {
+  position: absolute;
+  top: 50%;
+  right: 50px;
+  margin-top: -50px;
+}
+
+/*# sourceMappingURL=style.css.map */
